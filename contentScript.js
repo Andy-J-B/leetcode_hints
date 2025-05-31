@@ -9,6 +9,7 @@
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     // console.log(message);
     if (message.type === "NEW") {
+      console.log("NEW");
       currentProblem = message.problemTitle;
       newProblemLoaded();
     } else if (message.type == "SHOW_HINT") {
